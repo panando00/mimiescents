@@ -1,0 +1,32 @@
+/* catalog-style.css */
+.catalog-container {
+    padding: 100px 2rem 2rem;
+    background: linear-gradient(135deg, white, var(--light-pink));
+}
+
+.filters {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    background: var(--primary-pink);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--royal-purple);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}

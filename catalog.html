@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Catalog - Mimiescents</title>
+    <link rel="stylesheet" href="styles/catalog.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">Mimiescents</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Full Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="catalog-container">
+        <h1>Our Complete Collection</h1>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="female">For Her</button>
+            <button class="filter-btn" data-category="male">For Him</button>
+            <button class="filter-btn" data-category="unisex">Unisex</button>
+        </div>
+
+        <section class="products-grid">
+            <!-- Female Fragrances -->
+            <div class="product-card" data-category="female">
+                <img src="images/perfume.jpg" alt="Paris Hilton">
+                <h3>Paris Hilton</h3>
+                <p class="price">R899.99</p>
+                <p class="description">A glamorous blend of apple, peach, and musky undertones.</p>
+                <button class="whatsapp-btn" data-product="Paris Hilton" data-price="899.99">
+                    Order via WhatsApp <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
+
+            <div class="product-card" data-category="female">
+                <img src="images/perfume.jpg" alt="White Diamond">
+                <h3>White Diamond</h3>
+                <p class="price">R1,199.99</p>
+                <p class="description">Elizabeth Taylor's classic with notes of lily and jasmine.</p>
+                <button class="whatsapp-btn" data-product="White Diamond" data-price="1199.99">
+                    Order via WhatsApp <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
+
+            <!-- Male Fragrances -->
+            <div class="product-card" data-category="male">
+                <img src="images/perfume.jpg" alt="Creed Aventus">
+                <h3>Creed Aventus</h3>
+                <p class="price">R1,299.99</p>
+                <p class="description">A sophisticated blend of fruity and woody notes.</p>
+                <button class="whatsapp-btn" data-product="Creed Aventus" data-price="1299.99">
+                    Order via WhatsApp <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
+
+            <!-- Additional Products -->
+            <div class="product-card" data-category="unisex">
+                <img src="images/perfume.jpg" alt="CK One">
+                <h3>CK One</h3>
+                <p class="price">R799.99</p>
+                <p class="description">A fresh, clean unisex fragrance with citrus and green tea notes.</p>
+                <button class="whatsapp-btn" data-product="CK One" data-price="799.99">
+                    Order via WhatsApp <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
+
+            <!-- Add more product cards here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Mimiescents</h3>
+                <p>Scents of Royalty</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>WhatsApp: +27 61 750 4607</p>
+                <p>Email: info@mimiescents.co.za</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100067635842682"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/27617504607"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mimiescents. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/catalog.js"></script>
+</body>
+</html>

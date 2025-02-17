@@ -1,0 +1,164 @@
+/* Root variables for consistent theming */
+:root {
+    --primary-pink: #FFB6C1; /* Lighter, softer pink */
+    --royal-purple: #9B4F96; /* Softer purple */
+    --gold: #DDB865; /* Warmer, antique gold */
+    --light-pink: #FDE2E4; /* Very soft pink */
+    --dark-purple: #5E2D5E; /* Muted dark purple */
+    --off-white: #FFF9F9; /* Warm white */
+}
+
+/* About page container */
+.about-container {
+    background-color: var(--off-white);
+    padding-top: 20px;
+}
+
+/* Hero section styling */
+.about-hero {
+    background: linear-gradient(
+        rgba(155, 79, 150, 0.4), 
+        rgba(255, 182, 193, 0.4)
+    ), url('images/perfume.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-hero .tagline {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--gold);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Content sections */
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.story-section, .values-section, .promise-section {
+    margin-bottom: 4rem;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(155, 79, 150, 0.1);
+}
+
+/* Section headings */
+.about-content h2 {
+    color: var(--royal-purple);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.about-content h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-pink), var(--royal-purple));
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+/* Values grid styling */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+
+.value-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(155, 79, 150, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(155, 79, 150, 0.15);
+}
+
+.value-card i {
+    font-size: 2.8rem;
+    color: var(--royal-purple);
+    margin-bottom: 1.2rem;
+    background: linear-gradient(45deg, var(--primary-pink), var(--royal-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.value-card h3 {
+    color: var(--dark-purple);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Promise section styling */
+.promise-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.promise-section li {
+    padding: 0.8rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.promise-section li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .value-card {
+        padding: 2rem;
+    }
+}
+
+/* Add smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

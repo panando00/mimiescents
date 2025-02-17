@@ -1,9 +1,31 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
-    // WhatsApp Integration
+    // DOM Elements
+    const nav = document.querySelector('nav');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
     const whatsappButtons = document.querySelectorAll('.whatsapp-btn');
-    const phoneNumber = '+27617504607'; // Replace with actual number
     
+    // Constants
+    const phoneNumber = '+27617504607';
+    const scrollThreshold = 100;
+
+    // Mobile Menu Toggle
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event bubbling
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-container')) {
+                navLinks.classList.remove('active');
+            }
+        });
+    }
+
+    // WhatsApp Integration
     whatsappButtons.forEach(button => {
         button.addEventListener('click', function() {
             const product = this.dataset.product;
@@ -19,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth Scrolling
+    // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -33,15 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navigation Menu Toggle for Mobile
-    const nav = document.querySelector('nav');
-    const scrollThreshold = 100;
-
+    // Navigation Background Change on Scroll
     window.addEventListener('scroll', () => {
-        if (window.scrollY > scrollThreshold) {
-            nav.style.background = 'rgba(128, 0, 128, 0.95)';
-        } else {
-            nav.style.background = 'linear-gradient(to right, var(--primary-pink), var(--royal-purple))';
+        if (nav) {
+            if (window.scrollY > scrollThreshold) {
+                nav.style.background = 'rgba(128, 0, 128, 0.95)';
+            } else {
+                nav.style.background = 'linear-gradient(to right, var(--primary-pink), var(--royal-purple))';
+            }
         }
     });
 });

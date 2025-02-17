@@ -17,8 +17,8 @@
 /* Hero section styling */
 .about-hero {
     background: linear-gradient(
-        rgba(155, 79, 150, 0.4), 
-        rgba(255, 182, 193, 0.4)
+        rgba(167, 31, 157, 0.4), 
+        rgba(241, 60, 196, 0.4)
     ), url('images/perfume.jpg');
     background-size: cover;
     background-position: center;
